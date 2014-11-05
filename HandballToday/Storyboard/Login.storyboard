@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="caX-as-80A">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="69O-py-Q3o">
+            <objects>
+                <viewController id="caX-as-80A" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xaA-ap-5ze"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ooo-ca-XYJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VOp-ST-dpM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Digitall-All-login-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="VJJ-3c-egF" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0F-Mu-lXO">
+                                <rect key="frame" x="7" y="120" width="306" height="327"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="activation-field.png" translatesAutoresizingMaskIntoConstraints="NO" id="nIb-H8-cNW">
+                                        <rect key="frame" x="25" y="146" width="255" height="36"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="activation code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5d-Fa-ahA">
+                                        <rect key="frame" x="55" y="149" width="220" height="30"/>
+                                        <color key="textColor" red="0.082855437964616113" green="0.14931755991307313" blue="0.58355978260869568" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="caX-as-80A" id="ynL-cX-woH"/>
+                                        </connections>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="activation-field.png" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-Nb-nsn" userLabel="pwd-field.png">
+                                        <rect key="frame" x="25" y="200" width="255" height="36"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Fn-TD-idS" userLabel="password">
+                                        <rect key="frame" x="55" y="203" width="220" height="30"/>
+                                        <color key="textColor" red="0.08285543796" green="0.14931755990000001" blue="0.58355978259999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="caX-as-80A" id="cUz-zT-thX"/>
+                                        </connections>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ecare-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="msD-PG-xHT">
+                                        <rect key="frame" x="34" y="15" width="212" height="91"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXd-oe-QNg">
+                                        <rect key="frame" x="65" y="278" width="174" height="41"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="ACTIVATE" backgroundImage="button-login.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login:" destination="caX-as-80A" eventType="touchUpInside" id="Dno-OQ-nRh"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login-transparent-container.png" translatesAutoresizingMaskIntoConstraints="NO" id="el0-Ab-BUB">
+                                        <rect key="frame" x="0.0" y="0.0" width="306" height="327"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VJJ-3c-egF" firstAttribute="leading" secondItem="VOp-ST-dpM" secondAttribute="leading" id="5zI-af-QJX"/>
+                            <constraint firstItem="Ooo-ca-XYJ" firstAttribute="top" secondItem="VJJ-3c-egF" secondAttribute="bottom" id="GOg-J3-3M7"/>
+                            <constraint firstAttribute="trailing" secondItem="VJJ-3c-egF" secondAttribute="trailing" id="LnH-J4-wMj"/>
+                            <constraint firstItem="s0F-Mu-lXO" firstAttribute="top" secondItem="xaA-ap-5ze" secondAttribute="bottom" constant="100" id="UJQ-Hu-GdH"/>
+                            <constraint firstItem="s0F-Mu-lXO" firstAttribute="leading" secondItem="VOp-ST-dpM" secondAttribute="leading" constant="7" id="WON-Fi-gR7"/>
+                            <constraint firstItem="VJJ-3c-egF" firstAttribute="top" secondItem="VOp-ST-dpM" secondAttribute="top" id="YhM-HB-2kx"/>
+                            <constraint firstItem="s0F-Mu-lXO" firstAttribute="centerX" secondItem="VOp-ST-dpM" secondAttribute="centerX" id="ok6-ry-ddC"/>
+                            <constraint firstItem="Ooo-ca-XYJ" firstAttribute="top" secondItem="s0F-Mu-lXO" secondAttribute="bottom" constant="121" id="t6z-UB-Azo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="MC4-JP-ZUp"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="bXd-oe-QNg" id="y0l-Pg-hNp"/>
+                        <outlet property="lblPwd" destination="8Fn-TD-idS" id="Y8j-SA-pJz"/>
+                        <outlet property="txtPass" destination="j5d-Fa-ahA" id="UkE-vN-QQP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Bj-rP-yGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-497" y="-1032"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Digitall-All-login-bg.png" width="320" height="480"/>
+        <image name="activation-field.png" width="255" height="36"/>
+        <image name="button-login.png" width="174" height="41"/>
+        <image name="ecare-logo.png" width="212" height="91"/>
+        <image name="login-transparent-container.png" width="306" height="327"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
