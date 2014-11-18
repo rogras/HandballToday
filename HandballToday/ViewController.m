@@ -29,13 +29,12 @@
 
 - (void)showNextScreen
 {
-    /*
-    if ([WSLogin openLoginIfNeeded])
-        return;
-    */
-    UIStoryboard *storyboard = [StoryBoardStaticFactory storyBoardForMenu];
-    UIViewController *vc = [storyboard instantiateInitialViewController];
-    [self presentViewController:vc animated:YES completion:nil];
+    
+    PFLogInViewController *logInController = [[PFLogInViewController alloc] init];
+    logInController.delegate = self;
+    logInController.fields = PFLogInFieldsDefault | PFLogInFieldsFacebook | PFLogInFieldsTwitter;
+    [self presentViewController:logInController animated:YES completion:nil];
+    
     
     /*
      Enable HockeyApp
@@ -46,6 +45,25 @@
      [[BITHockeyManager sharedHockeyManager] startManager];
      [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
      */
+}
+
+#pragma mark - PFLogInViewControllerDelegate
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
+{
+    [logInController dismissViewControllerAnimated:YES completion:nil];
+     UIViewController *vc = [StoryBoardStaticFactory instantiateInitialViewControllerForPreferredTeam];
+     [self presentViewController:vc animated:YES completion:nil];
+    
+}
+
+- (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error
+{
+    
+}
+
+- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController
+{
+    
 }
 
 

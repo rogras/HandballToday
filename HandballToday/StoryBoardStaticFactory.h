@@ -10,25 +10,10 @@
 
 @interface StoryBoardStaticFactory : NSObject
 
-+ (UIStoryboard *)storyBoardForMainScreen;
-+ (UIViewController *)instantiateInitialViewControllerForMainScreen;
-+ (UIStoryboard *) storyBoardForHomeTab;
-+ (UIViewController *) instantiateInitialViewControllerForHomeTab;
-+ (UIStoryboard *) storyBoardForShareTab;
-+ (UINavigationController *) instantiateInitialViewControllerForShareTab;
-+ (UIStoryboard *) storyBoardForDoctorTab;
-+ (UIViewController *) instantiateInitialViewControllerForDoctorTab;
-+ (UIStoryboard *) storyBoardForMeTab;
-+ (UIViewController *) instantiateInitialViewControllerForMeTab;
-+ (UIStoryboard *) storyBoardForQuestionnaire;
-+ (UIViewController *) instantiateInitialViewControllerForQuestionnaire;
-+ (UIStoryboard *) storyBoardForErgonomy;
-+ (UIViewController *) instantiateInitialViewControllerForErgonomy;
-+ (UIStoryboard *) storyBoardForPills;
-+ (UIViewController *) instantiateInitialViewControllerForPills;
-+ (UIStoryboard *) storyBoardForHistory;
-+ (UIViewController *) instantiateInitialViewControllerForHistory;
 + (UIStoryboard *) storyBoardForMenu;
 + (UIViewController *) instantiateInitialViewControllerForMenu;
++ (UIStoryboard *) storyBoardForPreferredTeam;
++ (UIViewController *) instantiateInitialViewControllerForPreferredTeam;
+
 
 @end

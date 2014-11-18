@@ -16,12 +16,17 @@
 		DB1063F71A0AB56F0002213A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1063F61A0AB56F0002213A /* Images.xcassets */; };
 		DB1063FA1A0AB56F0002213A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1063F81A0AB56F0002213A /* LaunchScreen.xib */; };
 		DB1064061A0AB5700002213A /* HandballTodayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1064051A0AB5700002213A /* HandballTodayTests.m */; };
-		DB1064171A0AC0A30002213A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1064151A0AC0A30002213A /* Login.storyboard */; };
 		DB1064181A0AC0A30002213A /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1064161A0AC0A30002213A /* Menu.storyboard */; };
 		DB10641C1A0AC1BD0002213A /* StoryBoardStaticFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10641B1A0AC1BD0002213A /* StoryBoardStaticFactory.m */; };
 		DB1064241A0AC1F00002213A /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10641F1A0AC1F00002213A /* MenuCell.m */; };
 		DB1064251A0AC1F00002213A /* SideMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1064211A0AC1F00002213A /* SideMenuVC.m */; };
 		DB1064261A0AC1F00002213A /* SidePanelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1064231A0AC1F00002213A /* SidePanelVC.m */; };
+		DB7FA8B91A1282B8009D1976 /* PreferredTeam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7FA8B81A1282B8009D1976 /* PreferredTeam.storyboard */; };
+		DB7FA8BD1A128302009D1976 /* TeamsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7FA8BC1A128302009D1976 /* TeamsListTableViewController.m */; };
+		DB7FA8C41A12861A009D1976 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7FA8C31A12861A009D1976 /* Team.m */; };
+		DB7FA8C71A1289DC009D1976 /* TeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7FA8C61A1289DC009D1976 /* TeamTableViewCell.m */; };
+		DBD04EBE1A0D50CF001EDB86 /* ParseUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD04EBD1A0D50CF001EDB86 /* ParseUtilities.m */; };
+		DBD04EC31A0D5B07001EDB86 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD04EC21A0D5B07001EDB86 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +57,6 @@
 		DB1063FF1A0AB56F0002213A /* HandballTodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandballTodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1064041A0AB5700002213A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB1064051A0AB5700002213A /* HandballTodayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandballTodayTests.m; sourceTree = "<group>"; };
-		DB1064151A0AC0A30002213A /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		DB1064161A0AC0A30002213A /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		DB10641A1A0AC1BD0002213A /* StoryBoardStaticFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryBoardStaticFactory.h; sourceTree = "<group>"; };
 		DB10641B1A0AC1BD0002213A /* StoryBoardStaticFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryBoardStaticFactory.m; sourceTree = "<group>"; };
@@ -62,6 +66,18 @@
 		DB1064211A0AC1F00002213A /* SideMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuVC.m; sourceTree = "<group>"; };
 		DB1064221A0AC1F00002213A /* SidePanelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidePanelVC.h; sourceTree = "<group>"; };
 		DB1064231A0AC1F00002213A /* SidePanelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidePanelVC.m; sourceTree = "<group>"; };
+		DB7FA8B81A1282B8009D1976 /* PreferredTeam.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PreferredTeam.storyboard; sourceTree = "<group>"; };
+		DB7FA8BB1A128302009D1976 /* TeamsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamsListTableViewController.h; sourceTree = "<group>"; };
+		DB7FA8BC1A128302009D1976 /* TeamsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamsListTableViewController.m; sourceTree = "<group>"; };
+		DB7FA8C21A12861A009D1976 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		DB7FA8C31A12861A009D1976 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		DB7FA8C51A1289DC009D1976 /* TeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamTableViewCell.h; sourceTree = "<group>"; };
+		DB7FA8C61A1289DC009D1976 /* TeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTableViewCell.m; sourceTree = "<group>"; };
+		DBD04EBA1A0D4FB1001EDB86 /* HandBallToday-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HandBallToday-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		DBD04EBC1A0D50CF001EDB86 /* ParseUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseUtilities.h; sourceTree = "<group>"; };
+		DBD04EBD1A0D50CF001EDB86 /* ParseUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseUtilities.m; sourceTree = "<group>"; };
+		DBD04EC11A0D5B07001EDB86 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		DBD04EC21A0D5B07001EDB86 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +138,6 @@
 				DB1063F11A0AB56F0002213A /* ViewController.m */,
 				DB10641A1A0AC1BD0002213A /* StoryBoardStaticFactory.h */,
 				DB10641B1A0AC1BD0002213A /* StoryBoardStaticFactory.m */,
-				DB1063F31A0AB56F0002213A /* Main.storyboard */,
 				DB1063F61A0AB56F0002213A /* Images.xcassets */,
 				DB1063F81A0AB56F0002213A /* LaunchScreen.xib */,
 				DB1063ED1A0AB56F0002213A /* HandballToday.xcdatamodeld */,
@@ -134,6 +149,7 @@
 		DB1063E61A0AB56F0002213A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DBD04EBA1A0D4FB1001EDB86 /* HandBallToday-Prefix.pch */,
 				DB1063E71A0AB56F0002213A /* Info.plist */,
 				DB1063E81A0AB56F0002213A /* main.m */,
 			);
@@ -160,8 +176,9 @@
 		DB1064141A0AC0A30002213A /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				DB1064151A0AC0A30002213A /* Login.storyboard */,
 				DB1064161A0AC0A30002213A /* Menu.storyboard */,
+				DB1063F31A0AB56F0002213A /* Main.storyboard */,
+				DB7FA8B81A1282B8009D1976 /* PreferredTeam.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -169,6 +186,10 @@
 		DB1064191A0AC1080002213A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DB7FA8C11A12860D009D1976 /* Model */,
+				DB7FA8BA1A1282DB009D1976 /* Teams */,
+				DBD04EC01A0D5B07001EDB86 /* Home */,
+				DBD04EBB1A0D50CF001EDB86 /* Config */,
 				DB10641D1A0AC1F00002213A /* Menu */,
 			);
 			path = Classes;
@@ -185,6 +206,44 @@
 				DB1064231A0AC1F00002213A /* SidePanelVC.m */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		DB7FA8BA1A1282DB009D1976 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				DB7FA8BB1A128302009D1976 /* TeamsListTableViewController.h */,
+				DB7FA8BC1A128302009D1976 /* TeamsListTableViewController.m */,
+				DB7FA8C51A1289DC009D1976 /* TeamTableViewCell.h */,
+				DB7FA8C61A1289DC009D1976 /* TeamTableViewCell.m */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		DB7FA8C11A12860D009D1976 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB7FA8C21A12861A009D1976 /* Team.h */,
+				DB7FA8C31A12861A009D1976 /* Team.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DBD04EBB1A0D50CF001EDB86 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				DBD04EBC1A0D50CF001EDB86 /* ParseUtilities.h */,
+				DBD04EBD1A0D50CF001EDB86 /* ParseUtilities.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		DBD04EC01A0D5B07001EDB86 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DBD04EC11A0D5B07001EDB86 /* HomeViewController.h */,
+				DBD04EC21A0D5B07001EDB86 /* HomeViewController.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		F2F2A57C3B7C8DD7596A7B84 /* Pods */ = {
@@ -279,10 +338,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB1064181A0AC0A30002213A /* Menu.storyboard in Resources */,
-				DB1064171A0AC0A30002213A /* Login.storyboard in Resources */,
 				DB1063F51A0AB56F0002213A /* Main.storyboard in Resources */,
 				DB1063FA1A0AB56F0002213A /* LaunchScreen.xib in Resources */,
 				DB1063F71A0AB56F0002213A /* Images.xcassets in Resources */,
+				DB7FA8B91A1282B8009D1976 /* PreferredTeam.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,14 +392,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD04EBE1A0D50CF001EDB86 /* ParseUtilities.m in Sources */,
 				DB1063EF1A0AB56F0002213A /* HandballToday.xcdatamodeld in Sources */,
 				DB1063EC1A0AB56F0002213A /* AppDelegate.m in Sources */,
+				DBD04EC31A0D5B07001EDB86 /* HomeViewController.m in Sources */,
+				DB7FA8C41A12861A009D1976 /* Team.m in Sources */,
 				DB1064241A0AC1F00002213A /* MenuCell.m in Sources */,
 				DB1064251A0AC1F00002213A /* SideMenuVC.m in Sources */,
 				DB1063F21A0AB56F0002213A /* ViewController.m in Sources */,
 				DB1063E91A0AB56F0002213A /* main.m in Sources */,
 				DB1064261A0AC1F00002213A /* SidePanelVC.m in Sources */,
 				DB10641C1A0AC1BD0002213A /* StoryBoardStaticFactory.m in Sources */,
+				DB7FA8BD1A128302009D1976 /* TeamsListTableViewController.m in Sources */,
+				DB7FA8C71A1289DC009D1976 /* TeamTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +433,7 @@
 				DB1063F41A0AB56F0002213A /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		DB1063F81A0AB56F0002213A /* LaunchScreen.xib */ = {
@@ -465,6 +530,7 @@
 			baseConfigurationReference = 029B53850751A319686E1A59 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "HandBallToday-Prefix.pch";
 				INFOPLIST_FILE = HandballToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -476,6 +542,7 @@
 			baseConfigurationReference = CB10C616A9AE3DE128BF944B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "HandBallToday-Prefix.pch";
 				INFOPLIST_FILE = HandballToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

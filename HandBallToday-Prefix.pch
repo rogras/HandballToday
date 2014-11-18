@@ -1,0 +1,19 @@
+//
+//  HandBallToday-Prefix.pch
+//  HandballToday
+//
+//  Created by Roger Gras on 7/11/14.
+//  Copyright (c) 2014 rogras. All rights reserved.
+//
+
+#ifndef HandballToday_HandBallToday_Prefix_pch
+#define HandballToday_HandBallToday_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "ParseUtilities.h"
+#import <Parse/Parse.h>
+#import <PFFacebookUtils.h>
+
+#endif

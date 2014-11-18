@@ -1,24 +1,18 @@
 //
 //  SideMenuVC.m
-//  Digital Health
+//  HandballToday
 //
-//  Created by Raúl Blánquez on 22/04/14.
-//  Copyright (c) 2014 Axa. All rights reserved.
+//  Created by Roger Gras on 5/11/14.
+//  Copyright (c) 2014 rogras. All rights reserved.
 //
 
 #import "SideMenuVC.h"
 #import "JASidePanelController.h"
 #import "UIViewController+JASidePanel.h"
 #import "MenuCell.h"
-#import "UserProfile.h"
-#import "UserProfileData.h"
-#import "CustomTabBarController.h"
 
 
-@implementation SideMenuVC {
-    UserProfile *user;
-}
-
+@implementation SideMenuVC
 
 #pragma mark - UIViewController
 
@@ -26,7 +20,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    user = [UserProfileData loadUserProfile];
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"slide-menu-bg.png"]];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
@@ -39,7 +32,7 @@
 {
     static UIViewController *initialViewController;
     if (!initialViewController) {
-        initialViewController = [[UINavigationController alloc] initWithRootViewController:[[CustomTabBarController alloc] init]];
+        //initialViewController = [[UINavigationController alloc] initWithRootViewController:[[CustomTabBarController alloc] init]];
     }
     return initialViewController;
 }
@@ -71,9 +64,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if ([user isCoach]){
-        return 5;
-    }
     return 6;
 }
 
@@ -91,11 +81,7 @@
     } else if (indexPath.row == 1) {
         cell.lblMenuItem.text = NSLocalizedString(@"sidemenu_profile", nil);
         cell.storyboard = @"Profile";
-        if (user.photo) {
-            cell.imgIcon.image = [UIImage imageWithData:user.photo];
-        }else{
-            cell.imgIcon.image = [UIImage imageNamed:@"slide-menu-icon-profile"];
-        }
+        cell.imgIcon.image = [UIImage imageNamed:@"slide-menu-icon-profile"];
     } else if (indexPath.row == 2) {
         cell.lblMenuItem.text = NSLocalizedString(@"sidemenu_users", nil);
         cell.storyboard = @"Ranking";

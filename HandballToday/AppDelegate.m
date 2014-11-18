@@ -16,7 +16,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //enabling Parse
+    [Parse setApplicationId:APPLICATION_ID clientKey:CLIENT_KEY];
+    
+    //enabling Parse Analytics
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    //enabling twitter
+    [PFTwitterUtils initializeWithConsumerKey:@"zxf17fXfcKilTRty9UC8BzMIQ"
+                               consumerSecret:@"31dBio77XMCx9LzuFNEU99MBXG4hlRg6LJMJ2FnXh2XR3sAzlq"];
+    
+    //enabling Facebook
+    [PFFacebookUtils initializeFacebook];
+    
     return YES;
 }
 
@@ -122,6 +135,17 @@
             abort();
         }
     }
+}
+
+#pragma mark - Open App from url
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [PFFacebookUtils handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [PFFacebookUtils handleOpenURL:url];
 }
 
 @end
