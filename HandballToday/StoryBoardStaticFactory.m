@@ -23,4 +23,14 @@
     return [pcStoryBoard instantiateInitialViewController];
 }
 
++ (UIStoryboard *) storyBoardForNews
+{
+    return [UIStoryboard storyboardWithName:@"News" bundle:nil];
+}
++ (UIViewController *) instantiateInitialViewControllerForNews
+{
+    UIStoryboard *pcStoryBoard = [StoryBoardStaticFactory storyBoardForNews];
+    return [pcStoryBoard instantiateInitialViewController];
+}
+
 @end

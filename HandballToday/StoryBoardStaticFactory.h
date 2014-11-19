@@ -14,6 +14,8 @@
 + (UIViewController *) instantiateInitialViewControllerForMenu;
 + (UIStoryboard *) storyBoardForPreferredTeam;
 + (UIViewController *) instantiateInitialViewControllerForPreferredTeam;
++ (UIStoryboard *) storyBoardForNews;
++ (UIViewController *) instantiateInitialViewControllerForNews;
 
 
 @end

@@ -10,6 +10,7 @@
 #import "JASidePanelController.h"
 #import "UIViewController+JASidePanel.h"
 #import "AppDelegate.h"
+#import "StoryBoardStaticFactory.h"
 
 #define kNumArticlesInHeader    3
 
@@ -17,6 +18,7 @@
 {
     AppDelegate *_appDelegate;
     CLLocationManager *_locationManager;
+    NSArray *listTeamNews;
 }
 
 
@@ -36,6 +38,8 @@
     [self makeView];
     
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [self loadTeamNews];
     
     /*
      NSPredicate *predicate = [NSPredicate predicateWithFormat:
@@ -75,7 +79,7 @@
 
 - (IBAction)doShowProfile:(id)sender
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Profile" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Players" bundle:nil];
     
     //If profile exists goto directly to profile
     UIViewController *vc;
@@ -86,7 +90,7 @@
 
 - (IBAction)doShowAppointments:(id)sender
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Appointments" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Calendar" bundle:nil];
     UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"appointments"];
     
     [self pushVC:vc];
@@ -94,7 +98,7 @@
 
 - (IBAction)doShowEmergency:(id)sender
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Emergency" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"News" bundle:nil];
     UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"emergency"];
     
     [self pushVC:vc];
@@ -108,9 +112,9 @@
 // *****************************************************************************
 - (void)localizeLabels
 {
-    self.lblHealthProfile.text  = NSLocalizedString(@"home_btn_profile", Nil);
-    self.lblAppointment.text    = NSLocalizedString(@"home_btn_appointment", Nil);
-    self.lblEmergency.text      = NSLocalizedString(@"home_btn_emergency", Nil);
+    self.lblHealthProfile.text  = NSLocalizedString(@"home_btn_players", Nil);
+    self.lblAppointment.text    = NSLocalizedString(@"home_btn_calendar", Nil);
+    self.lblEmergency.text      = NSLocalizedString(@"home_btn_more_news", Nil);
 }
 
 - (void)makeView
@@ -129,6 +133,8 @@
     [self.btnAppointment.titleLabel setTextAlignment: NSTextAlignmentCenter];
     [self.btnEmergency.titleLabel setTextAlignment: NSTextAlignmentCenter];
     
+    self.pagedScrollView.homePagedNewsDelegate = self;
+    
 }
 
 - (void)pushVC:(UIViewController *)vc
@@ -136,6 +142,106 @@
         [self.navigationController pushViewController:vc animated:YES];
 }
 
+// *****************************************************************************
+#pragma mark -                                         HomePagedNewsDelegate
+// *****************************************************************************
 
+- (void)homePagedNews:(HomePagedNews *)homePagedNews
+     didScrollToIndex:(NSInteger)index
+{
+    self.headerPageControl.currentPage = index;
+    PFObject *news = listTeamNews[index];
+    self.headerTitleLabel.text = news[@"message"];
+    self.headerTopicLabel.text = news[@"title"];
+}
+
+
+- (void)homePagedNewsDidTapOnCurrentElement:(HomePagedNews *)homePagedNews
+{
+    
+    NSInteger selectedIndex = self.headerPageControl.currentPage;
+    PFObject *selectedArticle = listTeamNews[selectedIndex];
+    if (selectedArticle)
+    {
+        
+        [self _gotoArticleDetail:selectedArticle];
+    }
+    
+}
+
+
+- (void)_displayArticles
+{
+    [self.pagedScrollView clearSubviews];
+    self.headerPageControl.numberOfPages = 0;
+    
+    if (listTeamNews.count) {
+        
+        PFObject *news = listTeamNews[0];
+        self.headerTitleLabel.text = news[@"message"];
+        self.headerTopicLabel.text = news[@"title"];
+        
+        NSInteger addedArticles = 0;
+        for (PFObject *newsObject in listTeamNews) {
+            
+            PFFile *theImage = [newsObject objectForKey:@"image"];
+            NSData *imageData = [theImage getData];
+            UIImage *image = [UIImage imageWithData:imageData];
+            
+            [self.pagedScrollView addImage:image];
+            self.headerPageControl.numberOfPages += 1;
+            addedArticles += 1;
+            if (addedArticles == kNumArticlesInHeader) {
+                break;
+            }
+        }
+        
+    }
+    else {
+        [self _displayNoArticles];
+    }
+}
+
+- (void)_displayNoArticles
+{
+    self.headerTopicLabel.text = @"";
+    self.headerTitleLabel.text = @"";
+    [self.pagedScrollView clearSubviews];
+    self.headerPageControl.numberOfPages = 0;
+    
+    [self.pagedScrollView addImage:[UIImage imageNamed:@"home_news_default.png"]];
+    self.headerPageControl.numberOfPages += 1;
+}
+
+-(void) loadTeamNews
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"News"];
+    [query orderByAscending:@"updatedAt"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // Do something with the found objects
+            listTeamNews = [[NSArray alloc] initWithArray:objects];
+            [self _displayArticles];
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+            [self _displayNoArticles];
+        }
+    }];
+}
+
+- (void)_gotoArticleDetail:(ArticleEntity *)articleEntity
+{
+    if (!articleEntity) {
+        return;
+    }
+    
+    UIStoryboard *storyboard = [StoryBoardStaticFactory storyBoardForNews];
+    UIViewController *vc = [storyboard instantiateInitialViewControllerForNews];
+    
+    [self pushVC:vc];
+    
+ 
+}
 
 @end

@@ -25,8 +25,12 @@
 		DB7FA8BD1A128302009D1976 /* TeamsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7FA8BC1A128302009D1976 /* TeamsListTableViewController.m */; };
 		DB7FA8C41A12861A009D1976 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7FA8C31A12861A009D1976 /* Team.m */; };
 		DB7FA8C71A1289DC009D1976 /* TeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7FA8C61A1289DC009D1976 /* TeamTableViewCell.m */; };
+		DB97ABED1A1BD5FD00B75851 /* HomePagedNews.m in Sources */ = {isa = PBXBuildFile; fileRef = DB97ABEC1A1BD5FD00B75851 /* HomePagedNews.m */; };
+		DB97AC241A1BE3DE00B75851 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB97AC221A1BE3DE00B75851 /* Localizable.strings */; };
+		DB97AC351A1BE91900B75851 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB97AC341A1BE91900B75851 /* News.storyboard */; };
 		DBD04EBE1A0D50CF001EDB86 /* ParseUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD04EBD1A0D50CF001EDB86 /* ParseUtilities.m */; };
 		DBD04EC31A0D5B07001EDB86 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD04EC21A0D5B07001EDB86 /* HomeViewController.m */; };
+		DBE859021A1BEA03006DDE9D /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE859011A1BEA03006DDE9D /* ArticleDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,11 +77,17 @@
 		DB7FA8C31A12861A009D1976 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
 		DB7FA8C51A1289DC009D1976 /* TeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamTableViewCell.h; sourceTree = "<group>"; };
 		DB7FA8C61A1289DC009D1976 /* TeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTableViewCell.m; sourceTree = "<group>"; };
+		DB97ABEB1A1BD5FD00B75851 /* HomePagedNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePagedNews.h; sourceTree = "<group>"; };
+		DB97ABEC1A1BD5FD00B75851 /* HomePagedNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePagedNews.m; sourceTree = "<group>"; };
+		DB97AC231A1BE3DE00B75851 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DB97AC341A1BE91900B75851 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		DBD04EBA1A0D4FB1001EDB86 /* HandBallToday-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HandBallToday-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		DBD04EBC1A0D50CF001EDB86 /* ParseUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseUtilities.h; sourceTree = "<group>"; };
 		DBD04EBD1A0D50CF001EDB86 /* ParseUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseUtilities.m; sourceTree = "<group>"; };
 		DBD04EC11A0D5B07001EDB86 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		DBD04EC21A0D5B07001EDB86 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		DBE859001A1BEA03006DDE9D /* ArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailViewController.h; sourceTree = "<group>"; };
+		DBE859011A1BEA03006DDE9D /* ArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +140,7 @@
 		DB1063E51A0AB56F0002213A /* HandballToday */ = {
 			isa = PBXGroup;
 			children = (
+				DB97AC1F1A1BE3DE00B75851 /* Resources */,
 				DB1064191A0AC1080002213A /* Classes */,
 				DB1064141A0AC0A30002213A /* Storyboard */,
 				DB1063EA1A0AB56F0002213A /* AppDelegate.h */,
@@ -179,6 +190,7 @@
 				DB1064161A0AC0A30002213A /* Menu.storyboard */,
 				DB1063F31A0AB56F0002213A /* Main.storyboard */,
 				DB7FA8B81A1282B8009D1976 /* PreferredTeam.storyboard */,
+				DB97AC341A1BE91900B75851 /* News.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -186,6 +198,9 @@
 		DB1064191A0AC1080002213A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DBE858FF1A1BEA03006DDE9D /* News */,
+				DB97AC251A1BE86A00B75851 /* Content */,
+				DB97ABEE1A1BD64500B75851 /* 3rdParty */,
 				DB7FA8C11A12860D009D1976 /* Model */,
 				DB7FA8BA1A1282DB009D1976 /* Teams */,
 				DBD04EC01A0D5B07001EDB86 /* Home */,
@@ -228,6 +243,53 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DB97ABEA1A1BD5FD00B75851 /* HomePagedNews */ = {
+			isa = PBXGroup;
+			children = (
+				DB97ABEB1A1BD5FD00B75851 /* HomePagedNews.h */,
+				DB97ABEC1A1BD5FD00B75851 /* HomePagedNews.m */,
+			);
+			path = HomePagedNews;
+			sourceTree = "<group>";
+		};
+		DB97ABEE1A1BD64500B75851 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		DB97AC1F1A1BE3DE00B75851 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB97AC201A1BE3DE00B75851 /* CA */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB97AC201A1BE3DE00B75851 /* CA */ = {
+			isa = PBXGroup;
+			children = (
+				DB97AC211A1BE3DE00B75851 /* Labels */,
+			);
+			path = CA;
+			sourceTree = "<group>";
+		};
+		DB97AC211A1BE3DE00B75851 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				DB97AC221A1BE3DE00B75851 /* Localizable.strings */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		DB97AC251A1BE86A00B75851 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		DBD04EBB1A0D50CF001EDB86 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,10 +302,20 @@
 		DBD04EC01A0D5B07001EDB86 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DB97ABEA1A1BD5FD00B75851 /* HomePagedNews */,
 				DBD04EC11A0D5B07001EDB86 /* HomeViewController.h */,
 				DBD04EC21A0D5B07001EDB86 /* HomeViewController.m */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DBE858FF1A1BEA03006DDE9D /* News */ = {
+			isa = PBXGroup;
+			children = (
+				DBE859001A1BEA03006DDE9D /* ArticleDetailViewController.h */,
+				DBE859011A1BEA03006DDE9D /* ArticleDetailViewController.m */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		F2F2A57C3B7C8DD7596A7B84 /* Pods */ = {
@@ -338,6 +410,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB1064181A0AC0A30002213A /* Menu.storyboard in Resources */,
+				DB97AC241A1BE3DE00B75851 /* Localizable.strings in Resources */,
+				DB97AC351A1BE91900B75851 /* News.storyboard in Resources */,
 				DB1063F51A0AB56F0002213A /* Main.storyboard in Resources */,
 				DB1063FA1A0AB56F0002213A /* LaunchScreen.xib in Resources */,
 				DB1063F71A0AB56F0002213A /* Images.xcassets in Resources */,
@@ -403,6 +477,8 @@
 				DB1063E91A0AB56F0002213A /* main.m in Sources */,
 				DB1064261A0AC1F00002213A /* SidePanelVC.m in Sources */,
 				DB10641C1A0AC1BD0002213A /* StoryBoardStaticFactory.m in Sources */,
+				DBE859021A1BEA03006DDE9D /* ArticleDetailViewController.m in Sources */,
+				DB97ABED1A1BD5FD00B75851 /* HomePagedNews.m in Sources */,
 				DB7FA8BD1A128302009D1976 /* TeamsListTableViewController.m in Sources */,
 				DB7FA8C71A1289DC009D1976 /* TeamTableViewCell.m in Sources */,
 			);
@@ -442,6 +518,14 @@
 				DB1063F91A0AB56F0002213A /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		DB97AC221A1BE3DE00B75851 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB97AC231A1BE3DE00B75851 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

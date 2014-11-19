@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomePagedNews.h"
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController<HomePagedNewsDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *btnHealthProfile;
 @property (weak, nonatomic) IBOutlet UIButton *btnAppointment;
@@ -22,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *headerTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *headerTopicLabel;
 @property (strong, nonatomic) NSArray *articlesToDisplay;
-
+@property (weak, nonatomic) IBOutlet HomePagedNews *pagedScrollView;
 
 - (IBAction)doShowSideMenu:(id)sender;
 - (IBAction)doShowProfile:(id)sender;
