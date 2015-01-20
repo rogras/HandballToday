@@ -16,6 +16,7 @@
 + (UIViewController *) instantiateInitialViewControllerForPreferredTeam;
 + (UIStoryboard *) storyBoardForNews;
 + (UIViewController *) instantiateInitialViewControllerForNews;
-
++ (UIStoryboard *) storyBoardForPlayers;
++ (UIViewController *) instantiateInitialViewControllerForPlayers;
 
 @end

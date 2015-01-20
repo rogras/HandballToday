@@ -33,4 +33,14 @@
     return [pcStoryBoard instantiateInitialViewController];
 }
 
++ (UIStoryboard *) storyBoardForPlayers
+{
+    return [UIStoryboard storyboardWithName:@"Players" bundle:nil];
+}
++ (UIViewController *) instantiateInitialViewControllerForPlayers
+{
+    UIStoryboard *pcStoryBoard = [StoryBoardStaticFactory storyBoardForPlayers];
+    return [pcStoryBoard instantiateInitialViewController];
+}
+
 @end

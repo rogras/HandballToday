@@ -11,6 +11,7 @@
 
 @interface ArticleDetailViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) PFObject *articleEntity;
 
 @end

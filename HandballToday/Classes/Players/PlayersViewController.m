@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 rogras. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "PlayersViewController.h"
 #import "JASidePanelController.h"
 #import "UIViewController+JASidePanel.h"
 #import "AppDelegate.h"
 #import "StoryBoardStaticFactory.h"
 #import "ArticleDetailViewController.h"
-
+#import "InfoCell.h"
 #define kNumArticlesInHeader    3
 
-@interface HomeViewController ()
+@interface PlayersViewController ()
 {
     AppDelegate *_appDelegate;
     CLLocationManager *_locationManager;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation HomeViewController
+@implementation PlayersViewController
 
 // *****************************************************************************
 #pragma mark -                                          ViewController Lifecycle
@@ -41,27 +41,6 @@
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [self loadTeamNews];
-    
-    /*
-     NSPredicate *predicate = [NSPredicate predicateWithFormat:
-     @"objectId = %@", team.objectId];
-     
-     PFQuery *query = [PFQuery queryWithClassName:@"Teams" predicate:predicate];
-     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-     if (!error) {
-     // The find succeeded.
-     NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
-     // Do something with the found objects
-     for (PFObject *object in objects) {
-     NSLog(@"%@", object.objectId);
-     }
-     
-     } else {
-     // Log details of the failure
-     NSLog(@"Error: %@ %@", error, [error userInfo]);
-     }
-     }];
-     */
     
 }
 
@@ -78,43 +57,13 @@
     [self.sidePanelController showLeftPanelAnimated:TRUE];
 }
 
-- (IBAction)doShowProfile:(id)sender
-{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Players" bundle:nil];
-    
-    //If profile exists goto directly to profile
-    UIViewController *vc = [StoryBoardStaticFactory instantiateInitialViewControllerForPlayers];
-    
-    [self pushVC:vc];
-}
-
-- (IBAction)doShowAppointments:(id)sender
-{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Calendar" bundle:nil];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"appointments"];
-    
-    [self pushVC:vc];
-}
-
-- (IBAction)doShowEmergency:(id)sender
-{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"News" bundle:nil];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"emergency"];
-    
-    [self pushVC:vc];
-}
-
-
-
 
 // *****************************************************************************
 #pragma mark -                                         Private Helper Methods
 // *****************************************************************************
 - (void)localizeLabels
 {
-    self.lblHealthProfile.text  = NSLocalizedString(@"home_btn_players", Nil);
-    self.lblAppointment.text    = NSLocalizedString(@"home_btn_calendar", Nil);
-    self.lblEmergency.text      = NSLocalizedString(@"home_btn_more_news", Nil);
+    
 }
 
 - (void)makeView
@@ -129,11 +78,7 @@
     
     self.navigationItem.titleView = titleView;
     
-    [self.btnHealthProfile.titleLabel setTextAlignment: NSTextAlignmentCenter];
-    [self.btnAppointment.titleLabel setTextAlignment: NSTextAlignmentCenter];
-    [self.btnEmergency.titleLabel setTextAlignment: NSTextAlignmentCenter];
-    
-    self.pagedScrollView.homePagedNewsDelegate = self;
+    self.pagedScrollView.playersPagedScrollDelegate = self;
     
 }
 
@@ -146,17 +91,16 @@
 #pragma mark -                                         HomePagedNewsDelegate
 // *****************************************************************************
 
-- (void)homePagedNews:(HomePagedNews *)homePagedNews
-     didScrollToIndex:(NSInteger)index
+- (void)playersPagedScroll:(PlayersPagedScroll *)playersPagedScroll
+          didScrollToIndex:(NSInteger)index
 {
     self.headerPageControl.currentPage = index;
     PFObject *news = listTeamNews[index];
-    self.headerTitleLabel.text = news[@"message"];
-    self.headerTopicLabel.text = news[@"title"];
+    self.lblName.text = news[@"message"];
 }
 
 
-- (void)homePagedNewsDidTapOnCurrentElement:(HomePagedNews *)homePagedNews
+- (void)playersPagedScrollDidTapOnCurrentElement:(PlayersPagedScroll *)homePagedNews
 {
     
     NSInteger selectedIndex = self.headerPageControl.currentPage;
@@ -164,7 +108,7 @@
     if (selectedArticle)
     {
         
-        [self _gotoArticleDetail:selectedArticle];
+       
     }
     
 }
@@ -178,15 +122,14 @@
     if (listTeamNews.count) {
         
         PFObject *news = listTeamNews[0];
-        self.headerTitleLabel.text = news[@"message"];
-        self.headerTopicLabel.text = news[@"title"];
+        self.lblName.text = news[@"title"];
         
         NSInteger addedArticles = 0;
         for (PFObject *newsObject in listTeamNews) {
             
             PFFile *theImage = [newsObject objectForKey:@"image"];
             NSData *imageData = [theImage getData];
-            UIImage *image = [UIImage imageWithData:imageData];
+            UIImage *image = [UIImage imageNamed:@"profile"];
             
             [self.pagedScrollView addImage:image];
             self.headerPageControl.numberOfPages += 1;
@@ -204,8 +147,7 @@
 
 - (void)_displayNoArticles
 {
-    self.headerTopicLabel.text = @"";
-    self.headerTitleLabel.text = @"";
+    self.lblName.text = @"";
     [self.pagedScrollView clearSubviews];
     self.headerPageControl.numberOfPages = 0;
     
@@ -230,18 +172,25 @@
     }];
 }
 
-- (void)_gotoArticleDetail:(PFObject *)articleEntity
+#pragma mark - UITableViewDataSource
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (!articleEntity) {
-        return;
-    }
+    return 1;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 2;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)table cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    InfoCell *cell = [table dequeueReusableCellWithIdentifier:@"InfoCell" forIndexPath:indexPath];
     
-    UIStoryboard *storyboard = [StoryBoardStaticFactory storyBoardForNews];
-    ArticleDetailViewController *vc = [storyboard instantiateInitialViewController];
-    vc.articleEntity = articleEntity;
-    [self pushVC:vc];
-    
- 
+    return cell;
 }
 
 @end

@@ -28,6 +28,12 @@
 		DB97ABED1A1BD5FD00B75851 /* HomePagedNews.m in Sources */ = {isa = PBXBuildFile; fileRef = DB97ABEC1A1BD5FD00B75851 /* HomePagedNews.m */; };
 		DB97AC241A1BE3DE00B75851 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB97AC221A1BE3DE00B75851 /* Localizable.strings */; };
 		DB97AC351A1BE91900B75851 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB97AC341A1BE91900B75851 /* News.storyboard */; };
+		DBA131F41A38B7950079F4FA /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA131F11A38B7950079F4FA /* profile.png */; };
+		DBA131F51A38B7950079F4FA /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA131F31A38B7950079F4FA /* profile@2x.png */; };
+		DBA131FE1A38B9A50079F4FA /* PlayersPagedScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA131FB1A38B9A50079F4FA /* PlayersPagedScroll.m */; };
+		DBA131FF1A38B9A50079F4FA /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA131FD1A38B9A50079F4FA /* PlayersViewController.m */; };
+		DBA805FD1A38BD0600F53575 /* Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA805FC1A38BD0600F53575 /* Players.storyboard */; };
+		DBA806021A38C57400F53575 /* InfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA806011A38C57400F53575 /* InfoCell.m */; };
 		DBD04EBE1A0D50CF001EDB86 /* ParseUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD04EBD1A0D50CF001EDB86 /* ParseUtilities.m */; };
 		DBD04EC31A0D5B07001EDB86 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD04EC21A0D5B07001EDB86 /* HomeViewController.m */; };
 		DBE859021A1BEA03006DDE9D /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE859011A1BEA03006DDE9D /* ArticleDetailViewController.m */; };
@@ -81,6 +87,15 @@
 		DB97ABEC1A1BD5FD00B75851 /* HomePagedNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePagedNews.m; sourceTree = "<group>"; };
 		DB97AC231A1BE3DE00B75851 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DB97AC341A1BE91900B75851 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		DBA131F11A38B7950079F4FA /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		DBA131F31A38B7950079F4FA /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@2x.png"; sourceTree = "<group>"; };
+		DBA131FA1A38B9A50079F4FA /* PlayersPagedScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersPagedScroll.h; sourceTree = "<group>"; };
+		DBA131FB1A38B9A50079F4FA /* PlayersPagedScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersPagedScroll.m; sourceTree = "<group>"; };
+		DBA131FC1A38B9A50079F4FA /* PlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersViewController.h; sourceTree = "<group>"; };
+		DBA131FD1A38B9A50079F4FA /* PlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersViewController.m; sourceTree = "<group>"; };
+		DBA805FC1A38BD0600F53575 /* Players.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Players.storyboard; sourceTree = "<group>"; };
+		DBA806001A38C57400F53575 /* InfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoCell.h; sourceTree = "<group>"; };
+		DBA806011A38C57400F53575 /* InfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoCell.m; sourceTree = "<group>"; };
 		DBD04EBA1A0D4FB1001EDB86 /* HandBallToday-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HandBallToday-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		DBD04EBC1A0D50CF001EDB86 /* ParseUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseUtilities.h; sourceTree = "<group>"; };
 		DBD04EBD1A0D50CF001EDB86 /* ParseUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseUtilities.m; sourceTree = "<group>"; };
@@ -140,6 +155,7 @@
 		DB1063E51A0AB56F0002213A /* HandballToday */ = {
 			isa = PBXGroup;
 			children = (
+				DBA131EF1A38B7950079F4FA /* Images */,
 				DB97AC1F1A1BE3DE00B75851 /* Resources */,
 				DB1064191A0AC1080002213A /* Classes */,
 				DB1064141A0AC0A30002213A /* Storyboard */,
@@ -191,6 +207,7 @@
 				DB1063F31A0AB56F0002213A /* Main.storyboard */,
 				DB7FA8B81A1282B8009D1976 /* PreferredTeam.storyboard */,
 				DB97AC341A1BE91900B75851 /* News.storyboard */,
+				DBA805FC1A38BD0600F53575 /* Players.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -198,6 +215,7 @@
 		DB1064191A0AC1080002213A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DBA131F81A38B9A50079F4FA /* Players */,
 				DBE858FF1A1BEA03006DDE9D /* News */,
 				DB97AC251A1BE86A00B75851 /* Content */,
 				DB97ABEE1A1BD64500B75851 /* 3rdParty */,
@@ -288,6 +306,60 @@
 			children = (
 			);
 			path = Content;
+			sourceTree = "<group>";
+		};
+		DBA131EF1A38B7950079F4FA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DBA131F01A38B7950079F4FA /* 320 */,
+				DBA131F21A38B7950079F4FA /* 640 */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		DBA131F01A38B7950079F4FA /* 320 */ = {
+			isa = PBXGroup;
+			children = (
+				DBA131F11A38B7950079F4FA /* profile.png */,
+			);
+			path = 320;
+			sourceTree = "<group>";
+		};
+		DBA131F21A38B7950079F4FA /* 640 */ = {
+			isa = PBXGroup;
+			children = (
+				DBA131F31A38B7950079F4FA /* profile@2x.png */,
+			);
+			path = 640;
+			sourceTree = "<group>";
+		};
+		DBA131F81A38B9A50079F4FA /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				DBA805FF1A38C57400F53575 /* Cell */,
+				DBA131F91A38B9A50079F4FA /* PlayersPagedScroll */,
+				DBA131FC1A38B9A50079F4FA /* PlayersViewController.h */,
+				DBA131FD1A38B9A50079F4FA /* PlayersViewController.m */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		DBA131F91A38B9A50079F4FA /* PlayersPagedScroll */ = {
+			isa = PBXGroup;
+			children = (
+				DBA131FA1A38B9A50079F4FA /* PlayersPagedScroll.h */,
+				DBA131FB1A38B9A50079F4FA /* PlayersPagedScroll.m */,
+			);
+			path = PlayersPagedScroll;
+			sourceTree = "<group>";
+		};
+		DBA805FF1A38C57400F53575 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DBA806001A38C57400F53575 /* InfoCell.h */,
+				DBA806011A38C57400F53575 /* InfoCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DBD04EBB1A0D50CF001EDB86 /* Config */ = {
@@ -414,8 +486,11 @@
 				DB97AC351A1BE91900B75851 /* News.storyboard in Resources */,
 				DB1063F51A0AB56F0002213A /* Main.storyboard in Resources */,
 				DB1063FA1A0AB56F0002213A /* LaunchScreen.xib in Resources */,
+				DBA805FD1A38BD0600F53575 /* Players.storyboard in Resources */,
 				DB1063F71A0AB56F0002213A /* Images.xcassets in Resources */,
 				DB7FA8B91A1282B8009D1976 /* PreferredTeam.storyboard in Resources */,
+				DBA131F41A38B7950079F4FA /* profile.png in Resources */,
+				DBA131F51A38B7950079F4FA /* profile@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +543,7 @@
 			files = (
 				DBD04EBE1A0D50CF001EDB86 /* ParseUtilities.m in Sources */,
 				DB1063EF1A0AB56F0002213A /* HandballToday.xcdatamodeld in Sources */,
+				DBA131FF1A38B9A50079F4FA /* PlayersViewController.m in Sources */,
 				DB1063EC1A0AB56F0002213A /* AppDelegate.m in Sources */,
 				DBD04EC31A0D5B07001EDB86 /* HomeViewController.m in Sources */,
 				DB7FA8C41A12861A009D1976 /* Team.m in Sources */,
@@ -476,11 +552,13 @@
 				DB1063F21A0AB56F0002213A /* ViewController.m in Sources */,
 				DB1063E91A0AB56F0002213A /* main.m in Sources */,
 				DB1064261A0AC1F00002213A /* SidePanelVC.m in Sources */,
+				DBA806021A38C57400F53575 /* InfoCell.m in Sources */,
 				DB10641C1A0AC1BD0002213A /* StoryBoardStaticFactory.m in Sources */,
 				DBE859021A1BEA03006DDE9D /* ArticleDetailViewController.m in Sources */,
 				DB97ABED1A1BD5FD00B75851 /* HomePagedNews.m in Sources */,
 				DB7FA8BD1A128302009D1976 /* TeamsListTableViewController.m in Sources */,
 				DB7FA8C71A1289DC009D1976 /* TeamTableViewCell.m in Sources */,
+				DBA131FE1A38B9A50079F4FA /* PlayersPagedScroll.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
